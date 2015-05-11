@@ -188,6 +188,8 @@ body, input {text-shadow: 0.02em 0.02em 0.03em #999999 !important;}
 
 <li>XM (EXotic Matter)</li>
 
+<li>XMP Burster &amp; Ultra Strike</li>
+
 </ul>
 </p>
 
@@ -5447,7 +5449,7 @@ body, input {text-shadow: 0.02em 0.02em 0.03em #999999 !important;}
 <div created="20150414104740210" modified="20150414104740210" title="$:/status/UserName">
 <pre>Gefenbauer</pre>
 </div>
-<div list="Home" title="$:/StoryList">
+<div list="[[XMP Burster &amp; Ultra Strike]] Home" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20150414110412399" creator="Gefenbauer" modified="20150414111250281" modifier="Gefenbauer" tags="" title="$:/tags/Stylesheet" type="text/css">
@@ -6063,6 +6065,59 @@ Scanner的运行需要XM支持，若Scanner的XM存储量变为0之后会被''�
 * 会出现Portal周围的XM吸收不了的情况。此时可通过清空Ingress的Cache解决。
 * 不同等级的玩家能够存储的XM最大值不同。具体请参考[[AP &amp; 权限等级]]。
 
+</pre>
+</div>
+<div created="20150511082833092" creator="Gefenbauer" modified="20150511091302640" modifier="Gefenbauer" tags="" title="XMP Burster &amp; Ultra Strike">
+<pre>!什么是XMP Burster
+
+简称XMP。大家可能会有一个''它是一种武器''的误解，但是实际上它并不是一个武器，而是可干涉XM来源所在的相位空间的谐振器的一种。
+
+在游戏中，使用此道具可通过消耗一定数量的XM来对周围的''所有敌军的Resonator''造成伤害。
+
+* 对Resonator所造成的伤害，在使用的时候中心点威力最大，然后随着放射距离威力逐渐减少。越高等级的XMP射程越长，威力越大。
+* 有时候会造成暴击伤害。此时可造成2倍伤害。
+* 在进行释放（Fire）XMP的时候，可通过长按进行蓄力。在光圈收缩至最小的时候释放按键即可有20%的伤害加成。越高等级的XMP，这个时机掌握越困难。
+* 使用XMP所需要的XM量为 `Lv*50XM`。Recycle后获得的XM量为`Lv*20XM`。
+
+所有等级的XMP以及其威力基准值、有效射程、衰减区域和幅度见下表。威力基准值是以中心点的威力为准。
+
+|!XMP等级|!威力基准值|!射程|!Range1|!威力|!Range2|!威力|!Range3|!威力|!Range4|!威力|!Range5|!威力|
+| Lv1 | 150| 42m| 0m-7m | 125| 8m-15m | 100| 16m-23m | 75| 24m-31m | 50| `32m-39m` | `25`|
+| Lv2 | 300| 48m| 0m-8m | 250| 9m-17m | 200| 18m-26m | 150| 27m-35m | 100| `36m-44m` | `50`|
+| Lv3 | 500| 58m| 0m-10m | 417| 11m-21m | 334| 22m-32m | 251| `33m-43m` | `168`| 44m-54m | 84|
+| Lv4 | 900| 72m| 0m-13m | 750| 14m-27m | 600| `28m-41m` | `450`| 42m-55m | 300| 56m-69m | 150|
+| Lv5 | 1200| 90m| 0m-17m | 1000| 18m-35m | 800| `36m-53m` | `600`| 54m-71m | 400| 72m-89m | 200|
+| Lv6 | 1500| 112m| 0m-21m | 1250| `22m-43m` | `1000`| 44m-65m | 750| 66m-87m | 500| 88m-109m | 250|
+| Lv7 | 1800| 138m| 0m-26m | 1500| `27m-53m` | `1200`| 54m-80m | 900| 81m-107m | 600| 108m-134m | 300|
+| Lv8 | 2700| 168m| 0m-32m | 2250| `33m-65m` | `1800`| 66m-98m | 1350| 99m-131m | 900| 132m-164m | 450|
+
+其中`红色标注`的是''当你在Portal中央释放XMP时对最远的Resonator造成的伤害''。由此就能解释为什么从Lv4的XMP开始威力会有大幅度的强化。因此在使用低级XMP的时候尽量靠近Resonator进行释放而不是尽量靠近Portal中央，4-5级XMP的时候要根据高级Resonator的分布适当地进行调整。
+
+另外如果Portal中央在Range1范围内，''卸载MOD的效率最高''。使用6级以上XMP的时候，建议尽量把多个Portal的中央放到Range1范围以内。
+
+!Ultra Strike
+
+简称US。''这个和XMP不同，这个是兵器''。
+
+使用上大致和XMP Burster一致，不同在于''射程极小，中心点威力极大''。
+
+|!US等级|!射程|!威力基准值|
+| 1 | 10m | 300 |
+| 2 | 13m | 600 |
+| 3 | 16m | 1000 |
+| 4 | 18m | 1800 |
+| 5 | 21m | 2400 |
+| 6 | 24m | 3000 |
+| 7 | 27m | 3600 |
+| 8 | 30m | 5400 |
+
+* 对Resonator所造成的伤害，在使用的时候中心点威力最大，然后随着放射距离威力逐渐减少。越高等级的XMP射程越长，威力越大。
+* 有时候会造成暴击伤害。此时可造成2倍伤害。
+* 在进行释放（Fire）XMP的时候，可通过长按进行蓄力。在光圈收缩至最小的时候释放按键即可有20%的伤害加成。越高等级的XMP，这个时机掌握越困难。
+* 使用XMP所需要的XM量为 `Lv*50XM`。Recycle后获得的XM量为`Lv*20XM`。
+* ''在拆除Portal Shield这点上比XMP更加有优势''。具体机制不明。
+
+ 
 </pre>
 </div>
 
