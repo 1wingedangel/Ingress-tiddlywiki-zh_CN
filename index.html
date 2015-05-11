@@ -5445,7 +5445,7 @@ body, input {text-shadow: 0.02em 0.02em 0.03em #999999 !important;}
 <div created="20150414104740210" modified="20150414104740210" title="$:/status/UserName">
 <pre>Gefenbauer</pre>
 </div>
-<div list="[[Portal Keys &amp; Link &amp; Control Fields]] Home" title="$:/StoryList">
+<div list="Home [[Portal Keys &amp; Link &amp; Control Fields]]" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20150414110412399" creator="Gefenbauer" modified="20150414111250281" modifier="Gefenbauer" tags="" title="$:/tags/Stylesheet" type="text/css">
@@ -5829,7 +5829,7 @@ Link Range = 160 * (Resonator等级均数^4)
 ** 最初就已经有的Portal照片上的用户名称可指向 http://www.panoramio.com 相应照片的网址。
 ** 没有玩家名称的Portal是beta期间通过电邮附件形式申请的Portal。</pre>
 </div>
-<div created="20150510081036435" creator="Gefenbauer" modified="20150510082652910" modifier="Gefenbauer" tags="" title="Portal Keys &amp; Link &amp; Control Fields">
+<div created="20150510081036435" creator="Gefenbauer" modified="20150511045809116" modifier="Gefenbauer" tags="" title="Portal Keys &amp; Link &amp; Control Fields">
 <pre>由于 Portal Keys，Link 和 Control Field 差不多讲的是同一个东西所以一起讲。
 
 !Portal Keys
@@ -5845,7 +5845,76 @@ Link Range = 160 * (Resonator等级均数^4)
 * 当你已经拥有了该Portal的Key的时候，下一次Hack''将获取不到该Portal的Key''。若需要多个同一个Portal的Key的话，要么Drop到地上在Hack，要么把Key扔进Capsule里再Hack，要么多人进行Hack。
 * 当你破坏了Link的时候，''会有一定概率掉落远端Portal的Key。''
 
+!Link
 
+简单地说就是，用一根线把两个Portal连在一起的行为。设定上大概是''把另一边的Portal的Key插入Portal中来远程访问那边的Portal，并且使其发出一条能量光束连向这边''的感觉。（所以能量的流向是反过来的）
+
+* 在同一个Portal上，Link分成OUT和IN两种。
+** 近端到远端为OUT。能够拉出OUT Link的条件为：
+*** Link两端都插有8个Resonator。
+*** ''一个Portal上的OUT最多8根''。
+*** Portal本身并不在一个CF中。
+** 从远端拉进来的Link为IN。''同一个Portal上IN并没有任何数量限制''。
+* 无论蓝绿，''每条Link都不能相交''。
+* 当Portal上的Resonator被破坏成3个以下时，Link就会被破坏。
+
+!!Link距离计算
+
+Link的可连接距离和Portal上的Resonator等级有关。计算式为：
+
+```
+160m * (Resonator等级均值^4)
+```
+
+常见距离参考：
+
+* Res 87665544 P5 160.18km RLA2 400.45km
+* Res 88776666 P6 332.15km RLA4 996.45km
+* Res 88877766 P7 412.34km RLA4 1237.03km
+* Res 88887777 P7 506.25km RLA4個 1518.75km
+
+!!Link增加Portal的防御力
+
+Link能够增加Portal的防御力（[[mitigation|PortalShield]]）。计算公式以及增加幅度如下：
+
+```
+mitigation = 400/9*aTAN(Links/e)
+```
+
+|!Link数量|!mitigation|!合计mitigation|!换算成Shield|
+| 1 | 15.67| 15.6673| |
+| 2 | 12.52| 28.1922|Common |
+| 3 | 8.9| 37.0944| |
+| 4 | 6.19| 43.2850|Rare |
+| 5 | 4.4| 47.6816| |
+| 6 | 3.23| 50.9072| |
+| 7 | 2.44| 53.3508| |
+| 8 | 1.9| 55.2556| |
+| 9 | 1.52| 56.7768| |
+| 10 | 1.24| 58.0169| |
+| 11 | 1.03| 59.0459| |
+| 12 | 0.87| 59.9125|Very Rare |
+
+!Control Field
+
+以相互连在一起的三个Portal为顶点发出Link所建立的三角形区域即为Control Field。
+
+在CF区域内的Portal无法发出任何Link。
+
+!! MU
+全称是Mind Unit。根据CF的面积大小以及该区域的人口密度计算而成。
+
+每个Checkpoint的MU总数将影响该区域的蓝绿总分排名。
+
+!!建造多重CF
+
+由于Link无法相交，而且在CF中的Portal无法发出Link，理论上是不能建造一个重叠的Field。但是由于CF顶点的Portal依然可以发出Link到CF中的Portal，于是就有了在小范围区域里面可多次累计计算MU的多重CF法。
+
+[img[./img/OnionCF.png]]
+
+多重CF的入门知识以及高级应用请参考上海玩家`SpiritRain`提供的[[Ingress多重Field指南|https://docs.google.com/document/d/1tZR6t2KPXuTPIiD2OKxojEcTHq6zCqriG7TdKeTxzdU/edit]]
+
+需要注意的是，虽然CF中的Portal是不能往外拉出Link的，但是''但是如果周围被CF环绕的顶点Portal是可以出Link的''。比如[ext[这个情况|./img/sea.png]]。
 
 
 
